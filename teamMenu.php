@@ -15,7 +15,7 @@ $team_api = curl($api);
 $team_kraken = curl($kraken);
 $json_api = json_decode($team_api, true);
 $json_kraken = json_decode($team_kraken, true);
-//your typical error checks
+//error checking, if the call to twitch fails we want to know about it.
 if ($json_api == NULL) {
 	echo "<div class='error'>Could not retrieve team information, please try again in a minute</div>";
 	die();
