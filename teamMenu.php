@@ -9,8 +9,8 @@ function curl($url){
 	return $data;
 }
 //Make the API calls to Twitch, and decode them appropriately.
-$api = 'http://api.twitch.tv/api/team/juicegaming/all_channels.json;
-$kraken = 'https://api.twitch.tv/kraken/teams/juicegaming;
+$api = 'http://api.twitch.tv/api/team/juicegaming/all_channels.json';
+$kraken = 'https://api.twitch.tv/kraken/teams/juicegaming';
 $team_api = curl($api);
 $team_kraken = curl($kraken);
 $json_api = json_decode($team_api, true);
